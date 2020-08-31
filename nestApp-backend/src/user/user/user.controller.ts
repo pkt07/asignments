@@ -7,7 +7,6 @@ import {VideoInfo} from "../Models/video.model";
 export class UserController {
     constructor(private userService: UserService) { }
 
-    // add a user
     @Post('/create')
     async addCustomer(@Res() res, @Body() userInfo: User) {
         const customer = await this.userService.addUser(userInfo);
